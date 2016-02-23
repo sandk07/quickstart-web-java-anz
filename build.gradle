@@ -18,12 +18,12 @@ ext.config = parsedConfig
 /** Added by Sandeep to override the hostname and port - Start **/
 
 // Check if host name and port are passed as parameters
-def hostname = project.hasProperty('hostname') ? project.getProperty('hostname') : config.server.hostname
-def port = project.hasProperty('port') ? project.getProperty('port') : config.server.port
+def hostnameParam = project.hasProperty('hostname') ? project.getProperty('hostname') : config.server.hostname
+def portPram = project.hasProperty('port') ? project.getProperty('port') : config.server.port
 
 // Override the existing port details
-config.server.hostname = hostname
-config.server.port = port
+config.server.hostname = hostnameParam
+config.server.port = portPram
 
 //println config.server.hostname
 //println config.server.port
